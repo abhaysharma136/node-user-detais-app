@@ -1,13 +1,14 @@
 import mysql from "mysql";
-
+import dotenv from "dotenv";
+dotenv.config();
 //Mysql connection
 async function createSqlConnection() {
   const SqlClient = mysql.createConnection({
-    host: "localhost",
-    port: "3306",
+    host: process.env.HOST,
+    port: process.env.SQLPORT,
     user: "root",
-    password: "8854892348abSH*",
-    database: "abhaydb",
+    password: process.env.SQLPASSWORD,
+    database: process.env.SQLDATABASE,
   });
   SqlClient.connect();
   console.log("Mysql connection established");
