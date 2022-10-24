@@ -6,7 +6,7 @@ async function createSqlConnection() {
   const SqlClient = mysql.createConnection({
     host: process.env.HOST,
     port: process.env.SQLPORT,
-    user: "root",
+    user: process.env.SQLUSER,
     password: process.env.SQLPASSWORD,
     database: process.env.SQLDATABASE,
   });
