@@ -1,5 +1,8 @@
 import { MongoClient } from "mongodb";
-const Mongo_Url = "mongodb+srv://abhaysharma136:8854892348absh@cluster0.dfdpejd.mongodb.net/?retryWrites=true&w=majority";
+import dotenv from "dotenv";
+
+dotenv.config();
+const Mongo_Url = process.env.Mongo_URL;
 
 //MYSql connection
 async function createMongoConnection() {
