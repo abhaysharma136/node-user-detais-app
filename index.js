@@ -1,6 +1,6 @@
 import express from "express";
 import cors from "cors";
-// import { SqlClient } from "./sqlConfig.js";
+import { SqlClient } from "./sqlConfig.js";
 import { Client } from "./mongoConfig.js";
 import dotenv from "dotenv";
 dotenv.config();
