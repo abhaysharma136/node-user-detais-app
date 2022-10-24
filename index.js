@@ -2,10 +2,13 @@ import express from "express";
 import cors from "cors";
 import { SqlClient } from "./sqlConfig.js";
 import { Client } from "./mongoConfig.js";
+import dotenv from "dotenv";
+dotenv.config();
+
 const app = express();
 app.use(cors());
 app.use(express.json());
-const PORT = 4000;
+const PORT = process.env.PORT;
 
 app.get("/", function (request, response) {
   response.send("hello World!!!");
